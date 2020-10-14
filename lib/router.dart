@@ -49,12 +49,12 @@ class ReplyRouterDelegate extends RouterDelegate<ReplyRoutePath>
             pages: [
               // TODO: Add Shared Z-Axis transition from search icon to search view page (Motion)
               const CustomTransitionPage(
-                transitionKey: ValueKey('Home'),
+                transitionKey: ValueKey<String>('Home'),
                 screen: HomePage(),
               ),
               if (routePath is ReplySearchPath)
                 const CustomTransitionPage(
-                  transitionKey: ValueKey('Search'),
+                  transitionKey: ValueKey<String>('Search'),
                   screen: SearchPage(),
                 ),
             ],

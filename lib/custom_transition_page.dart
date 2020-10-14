@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 // TODO: Prefer to use TransitionBuilderPage once it lands in stable.
 // https://github.com/material-components/material-components-flutter-motion-codelab/issues/32
 
-class CustomTransitionPage extends Page {
+class CustomTransitionPage extends Page<dynamic> {
   final Widget screen;
   final ValueKey transitionKey;
 
@@ -15,7 +15,7 @@ class CustomTransitionPage extends Page {
 
   @override
   Route createRoute(BuildContext context) {
-    return PageRouteBuilder(
+    return PageRouteBuilder<dynamic>(
         settings: this,
         pageBuilder: (context, animation, secondaryAnimation) {
           return screen;

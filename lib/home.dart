@@ -484,7 +484,7 @@ class _BottomAppBarActionItems extends StatelessWidget {
                   color: ReplyColors.white50,
                   onPressed: () async {
                     drawerController.reverse();
-                    showModalBottomSheet(
+                    showModalBottomSheet<dynamic>(
                       context: context,
                       shape: RoundedRectangleBorder(
                         borderRadius: modalBorder,
@@ -755,8 +755,8 @@ class _ReplyFabState extends State<_ReplyFab>
                   listen: false,
                 ).onCompose = true;
 
-                Navigator.of(context).push(
-                  PageRouteBuilder(
+                Navigator.of(context).push<dynamic>(
+                  PageRouteBuilder<dynamic>(
                     pageBuilder: (
                       BuildContext context,
                       Animation<double> animation,
